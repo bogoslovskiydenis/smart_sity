@@ -14,11 +14,31 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(preferredSize: Size(0, 110)),
+    return  Scaffold(
+      appBar: CustomAppBar(preferredSize: const Size(0, 110)),
       body: Center(
-        child: SizedBox(
-          height: 30,
+        child: Column(
+          children: [
+            Hero(
+              tag: 'user_image',
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+                child: SizedBox(
+                  height: 451,
+                  width: 358,
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.0),
+                            color: Colors.blue),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );
