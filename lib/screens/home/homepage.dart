@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_sity/screens/home/widget/card_item.dart';
 import 'package:smart_sity/screens/home/widget/custom_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,30 +15,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: CustomAppBar(preferredSize: const Size(0, 110)),
+    return Scaffold(
+      appBar: const CustomAppBar(preferredSize: Size(0, 110)),
       body: Center(
         child: Column(
           children: [
-            Hero(
-              tag: 'user_image',
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-                child: SizedBox(
-                  height: 451,
-                  width: 358,
-                  child: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5.0),
-                            color: Colors.blue),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            )
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Column(children: [
+                CardItem(),
+
+              ]),
+            ),
           ],
         ),
       ),
