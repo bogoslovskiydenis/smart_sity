@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_sity/screens/home/widget/custom_app_bar.dart';
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,9 +13,23 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar:  CustomAppBar(title: 'SmartCity',),
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.menu),
+        title: Text(
+          "SmartCity",
+          style: Theme.of(context).textTheme.headline5,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              (Icons.qr_code),
+            ),
+          ),
+        ],
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
     );
   }
-
 }
