@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget{
   const CustomAppBar({
-    Key? key, required this.preferredSize,
+    Key? key, required this.preferredSize, required this.text,  required this.child,
   }) :  super(key: key);
   final Size preferredSize;
+  final String text;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget{
       appBar: AppBar(
         leading: const Icon(Icons.menu),
         title: Text(
-          "SmartCity",
+          text,
           style: Theme.of(context).textTheme.headline5,
         ),
         actions: [
@@ -24,21 +26,8 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget{
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(56),
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: TextField(
-              decoration: InputDecoration(
-                  hintText: "Search attraction",
-                  prefixIcon: const Icon(Icons.search),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide.none),
-                  contentPadding: EdgeInsets.zero,
-                  filled: true,
-                  fillColor: Colors.white),
-            ),
-          ),
+          preferredSize: preferredSize,
+          child: child
         ),
         backgroundColor: Theme.of(context).primaryColor,
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smart_sity/screens/home/homepage.dart';
+import 'package:smart_sity/screens/information/information.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton(
@@ -48,7 +50,7 @@ class CustomElevatedButton extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 24),
                         ),
-                        onTap: () => {},
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => InformationScreen()))
                       ),
                       const Divider(
                         thickness: 1,
