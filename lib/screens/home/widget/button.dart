@@ -29,18 +29,58 @@ class CustomElevatedButton extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      const Text('Modal BottomSheet'),
-                      ElevatedButton(
-                        child: const Text('Close BottomSheet'),
-                        onPressed: () => Navigator.pop(context),
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ListTile(
+                        title: const Text('News',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 24)),
+                        onTap: () => {},
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        indent: 30,
+                        endIndent: 30,
+                      ),
+                      ListTile(
+                        title: const Text(
+                          'Attractions in AR',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        onTap: () => {},
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        indent: 30,
+                        endIndent: 30,
+                      ),
+                      ListTile(
+                        title: const Text(
+                          'Book a Tour',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        onTap: () => {},
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        indent: 30,
+                        endIndent: 30,
+                      ),
+                      ListTile(
+                        title: const Text('Reviews',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 24)),
+                        onTap: () => {},
                       ),
                     ],
                   ),
                 ),
               );
             },
-          );},
+          );
+        },
         style: OutlinedButton.styleFrom(
             primary: Theme.of(context).backgroundColor,
             fixedSize: const Size(180, 42),
