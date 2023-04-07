@@ -18,6 +18,9 @@ class CustomElevatedButton extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {
           showModalBottomSheet<void>(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
             context: context,
             builder: (BuildContext context) {
               return SizedBox(
