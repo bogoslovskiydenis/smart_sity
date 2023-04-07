@@ -9,43 +9,16 @@ class Dots extends StatelessWidget {
       padding: const EdgeInsets.only(top: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            height: 6,
-            width: 6,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey,
+        children: List.generate(
+          5,
+          (index) => Container(
+            margin: EdgeInsets.all(2),
+            child: const Icon(
+              Icons.circle,
+              size: 6,
             ),
           ),
-          SizedBox(width: 6,),
-          Container(
-            height: 6,
-            width: 6,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey,
-            ),
-          ),
-          SizedBox(width: 6,),
-          Container(
-            height: 6,
-            width: 6,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey,
-            ),
-          ),
-          SizedBox(width: 6,),
-          Container(
-            height: 6,
-            width: 6,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

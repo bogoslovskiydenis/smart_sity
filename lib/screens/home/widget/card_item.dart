@@ -10,6 +10,7 @@ class CardItem extends StatelessWidget {
   final int value;
   final String text;
   final String imagePath;
+  final int page = 0;
 
   @override
   Widget build(BuildContext context) {
