@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 ThemeData theme() {
   return ThemeData(
     //20, 33, 61
-      primaryColor: const Color(0xFF14213D),
-      scaffoldBackgroundColor: Colors.white,
+    //229, 229, 229
+      primaryColor:  const Color(0xFF14213D),
+      scaffoldBackgroundColor: const Color(0xffE5E5E5),
       backgroundColor: Colors.white,
       dialogBackgroundColor: const Color(0xFFCCCED7),
       fontFamily: 'Regular',
@@ -18,13 +19,12 @@ ThemeData theme() {
             fontSize: 24
         ),
         headline2: TextStyle(
-            color: Color(0xFFA8B3AB),
-            fontWeight: FontWeight.bold,
+            color: Colors.black,
             fontSize: 24
         ),
         headline3: TextStyle(
-            color: Color(0xFF282E4A),
-            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            fontWeight: FontWeight.normal,
             fontSize: 18
         ),
         headline4: TextStyle(
@@ -38,7 +38,7 @@ ThemeData theme() {
           fontSize: 14,
         ),
         bodyText1: TextStyle(
-          color: Color(0xFF2B2E4A),
+          color: Colors.black,
           fontWeight: FontWeight.normal,
           fontSize: 12,
         ),
