@@ -1,12 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
+import 'package:smart_sity/screens/information/widget/info_buttons.dart';
 import 'package:smart_sity/screens/information/widget/stars.dart';
 
-import 'button.dart';
-import 'dots.dart';
+import '../../home/widget/dots.dart';
 
-class CardItem extends StatelessWidget {
-  const CardItem(
+class CardInfo extends StatelessWidget {
+  const CardInfo(
       {Key? key, this.value = 0, required this.text, required this.imagePath})
       : super(key: key);
   final int value;
@@ -56,7 +57,7 @@ class CardItem extends StatelessWidget {
                                 vertical: 10.0, horizontal: 20.0),
                             child: Text(
                               'No. ${imgList.indexOf(item)} image',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
@@ -69,15 +70,13 @@ class CardItem extends StatelessWidget {
               ),
             ))
         .toList();
+
     return Column(
       children: [
         Container(
-          height: 451,
-          width: 358,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
-          ),
+          height: 500,
+          width: 390,
+          color: Colors.white,
           child: Column(
             children: [
               Builder(
@@ -100,48 +99,82 @@ class CardItem extends StatelessWidget {
                           ),
                         )
                         .toList(),
-
                   );
-
                 },
               ),
               const Dots(),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 20, left: 15),
-                    child: Column(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Ashkelon National Park",
-                          style: Theme.of(context).textTheme.headline2,
-                        ),
                         const SizedBox(
                           height: 10,
                         ),
                         Text(
                           text,
                           maxLines: 4,
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Stars(),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("14"),
+                        const SizedBox(
+                          width: 20,
+                        ),
                       ],
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Stars()
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        ReadMoreText(
+                          "Ashkelon National Park is an Israeli national park "
+                          "along the shore of the Mediterranean Sea southwest "
+                          "of the city of Ashkelon. The national park is situated "
+                          "in the heart of ancient Ashkelon. It is surrounded "
+                          "by a wall built in the mid-12th century "
+                          "by the Fatimid Caliphate. The wall was originally 2,200 meters in length, "
+                          "50 meters in width and 15… ",
+                          style: TextStyle(color: Colors.black),
+                          colorClickableText: Colors.pink,
+                          trimMode: TrimMode.Line,
+                          trimCollapsedText: '...Read more',
+                          trimExpandedText: ' Less',
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 20),
-                  const CustomElevatedButton(
-                    text: 'View',
-                    textColor: Colors.black,
-                  ),
+                  const SizedBox(height: 60),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15,right: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        InfoButton(
+                          text: 'View in AR',
+                          textColor: Colors.black,
+                        ),
+                        InfoButton(
+                          text: 'Location',
+                          textColor: Colors.black,
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ],

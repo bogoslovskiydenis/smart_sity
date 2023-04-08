@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
-    this.text = '',
+    this.text ,
     required this.child,
     required this.ledings,
     this.action =true, required this.iconButton, required this.preferredSize,
   }) : super(key: key);
-  final String text;
+  final Widget? text;
   final Widget child;
   final Widget? ledings;
   final bool  action;
@@ -21,20 +21,13 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     return Scaffold(
       appBar: AppBar(
         leading: ledings,
-          title: Text(
-        text,
-        style: Theme.of(context).textTheme.headline5,
-      ),
+          title: text,
         actions: action ? [
           iconButton
         ] : null ,
-        bottom: PreferredSize(preferredSize: Size(0,100), child: child),
+        bottom: PreferredSize(preferredSize: preferredSize, child: child),
         backgroundColor: Theme.of(context).primaryColor,
       ),
     );
   }
-
-  // @override
-  // // TODO: implement preferredSize
-  // Size get preferredSize => Size(0, 110);
 }

@@ -19,6 +19,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_rating_bar: ^4.0.1
   carousel_slider: ^4.2.1
+  readmore: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +38,9 @@ flutter:
     - assets/askpark.png
     - assets/seaP.png
     - assets/marina.png
+    - assets/news1.png
+    - assets/news2.png
+    - assets/news3.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

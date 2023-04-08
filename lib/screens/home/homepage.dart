@@ -17,8 +17,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      drawer: Drawer(),
+
       appBar: CustomAppBar(
-        text:  'Smart City' ,
+        text:  Text("Smart City" ,style: Theme.of(context).textTheme.headline5,),
         ledings: const Icon(Icons.menu),
         iconButton: IconButton(
           onPressed: () => Navigator.pushNamed(context, '/qr'),

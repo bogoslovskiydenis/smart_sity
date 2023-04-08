@@ -18,7 +18,7 @@ class Qr extends StatelessWidget implements PreferredSizeWidget {
     return Scaffold(
       appBar: CustomAppBar(
         preferredSize: Size(0,50),
-        text: 'Qr',
+        text:  Text("Qr" ,style: Theme.of(context).textTheme.headline2,),
         ledings: BackButton(),
         iconButton: IconButton(icon: Icon(Icons.more_horiz), onPressed:(){} ),
         child: Text("data"),

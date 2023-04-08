@@ -14,10 +14,12 @@ class Dots extends StatelessWidget {
         children: List.generate(
           5,
           (index) => Container(
-
-            child: const Icon(
-              Icons.circle,
-              size: 6,
+            child:  const Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Icon(
+                Icons.circle,
+                size: 6,
+              ),
             ),
           ),
         ),

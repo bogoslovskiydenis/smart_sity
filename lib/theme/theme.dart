@@ -19,13 +19,13 @@ ThemeData theme() {
             fontSize: 24
         ),
         headline2: TextStyle(
-            color: Colors.black,
-            fontSize: 24
+            color: Colors.white,
+            fontSize: 16
         ),
         headline3: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.normal,
-            fontSize: 18
+            fontSize: 20
         ),
         headline4: TextStyle(
             color: Color(0xFF282E4A),
