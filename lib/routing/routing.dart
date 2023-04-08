@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smart_sity/screens/information/information.dart';
+import 'package:smart_sity/screens/qr/qr.dart';
 
 import '../screens/home/homepage.dart';
 
@@ -10,7 +12,10 @@ class AppRouter {
     switch (settings.name) {
       case '/':
         return HomeScreen.route();
-
+      case InformationScreen.routeName:
+        return InformationScreen.route();
+      case Qr.routeName:
+        return Qr.route();
       default:
         return _errorRoute();
     }

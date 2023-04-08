@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smart_sity/screens/home/widget/custom_app_bar.dart';
 
-import '../home/homepage.dart';
 
-class Qr extends StatelessWidget with PreferredSizeWidget {
+class Qr extends StatelessWidget implements PreferredSizeWidget {
   const Qr({Key? key}) : super(key: key);
   static const String routeName = '/qr';
 
@@ -17,19 +16,12 @@ class Qr extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(56),
-        child: GestureDetector(
-          child: const CustomAppBar(
-            preferredSize: Size(0, 50), text: 'Qr',
-            child: Text("data"),
-          ),
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return HomeScreen();
-            }));
-          },
-        ),
+      appBar: CustomAppBar(
+        preferredSize: Size(0,50),
+        text: 'Qr',
+        ledings: BackButton(),
+        iconButton: IconButton(icon: Icon(Icons.more_horiz), onPressed:(){} ),
+        child: Text("data"),
       ),
       body: (Container(
         height: 1000,
@@ -40,5 +32,5 @@ class Qr extends StatelessWidget with PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => Size(0,0);
 }

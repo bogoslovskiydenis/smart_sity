@@ -5,6 +5,8 @@ class Dots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int activeIndex = 0;
+
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: Row(
@@ -12,7 +14,7 @@ class Dots extends StatelessWidget {
         children: List.generate(
           5,
           (index) => Container(
-            margin: EdgeInsets.all(2),
+
             child: const Icon(
               Icons.circle,
               size: 6,
@@ -23,3 +25,5 @@ class Dots extends StatelessWidget {
     );
   }
 }
+
+

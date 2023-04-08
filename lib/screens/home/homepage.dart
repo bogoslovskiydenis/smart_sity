@@ -16,26 +16,31 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme
-          .of(context)
-          .scaffoldBackgroundColor,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: CustomAppBar(
-          preferredSize: const Size(0, 110), text: 'Smart C', child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: TextField(
-          decoration: InputDecoration(
-              hintText: "Search attraction",
-              prefixIcon: const Icon(Icons.search),
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                  borderSide: BorderSide.none),
-              contentPadding: EdgeInsets.zero,
-              filled: true,
-              fillColor: Colors.white),
+        text:  'Smart City' ,
+        ledings: const Icon(Icons.menu),
+        iconButton: IconButton(
+          onPressed: () => Navigator.pushNamed(context, '/qr'),
+          icon: const Icon
+            (Icons.qr_code),),
+        preferredSize: Size(0,110),
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: TextField(
+            decoration: InputDecoration(
+                hintText: "Search attraction",
+                prefixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                    borderSide: BorderSide.none),
+                contentPadding: EdgeInsets.zero,
+                filled: true,
+                fillColor: Colors.white),
+          ),
         ),
-      ), ),
+      ),
       body: SingleChildScrollView(
-
         child: Center(
           child: Column(
             children: [
@@ -46,16 +51,26 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.vertical,
                   child: Column(children: const [
                     CardItem(
-                      text: 'The national park is situated in the heart of ancient Ashkelon. It is surrounded by a wall built in the mid-12th century by the Fatimid Caliphate.',
-                      imagePath: 'assets/askpark.png',),
-                    SizedBox(height: 15,),
+                      text:
+                          'The national park is situated in the heart of ancient Ashkelon. It is surrounded by a wall built in the mid-12th century by the Fatimid Caliphate.',
+                      imagePath: 'assets/askpark.png',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
                     CardItem(
-                      text: 'Sea Park was developed as a vivid public space on the waterfront, which includes recreation areas, unique extreme sports attractions, special playgrounds and restaurants.',
-                      imagePath: 'assets/seaP.png',),
-                    SizedBox(height: 10,),
+                      text:
+                          'Sea Park was developed as a vivid public space on the waterfront, which includes recreation areas, unique extreme sports attractions, special playgrounds and restaurants.',
+                      imagePath: 'assets/seaP.png',
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     CardItem(
-                      text: 'Marina Ashkelon is one of the most advanced and beautiful marinas in Israel, and a southern gateway to the Mediterranean Sea.',
-                      imagePath: 'assets/marina.png',)
+                      text:
+                          'Marina Ashkelon is one of the most advanced and beautiful marinas in Israel, and a southern gateway to the Mediterranean Sea.',
+                      imagePath: 'assets/marina.png',
+                    )
                   ]),
                 ),
               ),

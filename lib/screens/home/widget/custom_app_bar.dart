@@ -1,36 +1,40 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget{
+class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   const CustomAppBar({
-    Key? key, required this.preferredSize, required this.text,  required this.child,
-  }) :  super(key: key);
-  final Size preferredSize;
+    Key? key,
+    this.text = '',
+    required this.child,
+    required this.ledings,
+    this.action =true, required this.iconButton, required this.preferredSize,
+  }) : super(key: key);
   final String text;
   final Widget child;
+  final Widget? ledings;
+  final bool  action;
+  final IconButton iconButton;
+  final Size preferredSize;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        title: Text(
-          text,
-          style: Theme.of(context).textTheme.headline5,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              (Icons.qr_code),
-            ),
-          ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: preferredSize,
-          child: child
-        ),
+        leading: ledings,
+          title: Text(
+        text,
+        style: Theme.of(context).textTheme.headline5,
+      ),
+        actions: action ? [
+          iconButton
+        ] : null ,
+        bottom: PreferredSize(preferredSize: Size(0,100), child: child),
         backgroundColor: Theme.of(context).primaryColor,
       ),
     );
   }
+
+  // @override
+  // // TODO: implement preferredSize
+  // Size get preferredSize => Size(0, 110);
 }
