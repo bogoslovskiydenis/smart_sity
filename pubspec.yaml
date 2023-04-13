@@ -42,6 +42,8 @@ flutter:
     - assets/news1.png
     - assets/news2.png
     - assets/news3.png
+    - assets/reality.png
+    - assets/map.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

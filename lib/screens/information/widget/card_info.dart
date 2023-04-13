@@ -160,21 +160,24 @@ class CardInfo extends StatelessWidget {
                   ),
                   const SizedBox(height: 60),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15,right: 15),
+                    padding: const EdgeInsets.only(left: 15,right: 15,bottom: 30),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         InfoButton(
                           text: 'View in AR',
-                          textColor: Colors.black,
+                          textColor: Colors.black, image: 'assets/reality.png',
                         ),
                         InfoButton(
                           text: 'Location',
-                          textColor: Colors.black,
+                          textColor: Colors.black, image: 'assets/map.png',
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  const Divider(
+                    thickness: 1,
+                  ),
                 ],
               ),
             ],

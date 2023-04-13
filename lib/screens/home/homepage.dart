@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      drawer: Drawer(),
+      drawer: const Drawer(),
 
       appBar: CustomAppBar(
         text:  Text("Smart City" ,style: Theme.of(context).textTheme.headline5,),

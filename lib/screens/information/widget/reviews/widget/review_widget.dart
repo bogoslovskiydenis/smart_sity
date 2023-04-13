@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../stars.dart';
+import '../../stars.dart';
 
 class ReviewsCard extends StatelessWidget {
   const ReviewsCard(
@@ -45,13 +45,13 @@ class ReviewsCard extends StatelessWidget {
                       const Stars(),
                       Text(
                         textData, maxLines: 1,
-                        style: TextStyle(fontSize: 11),
+                        style: const TextStyle(fontSize: 11),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 15, right: 15),
+                  padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Text(
                     textReview,
                     maxLines: 4,

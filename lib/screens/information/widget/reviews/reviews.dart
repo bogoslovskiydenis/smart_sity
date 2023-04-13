@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_sity/screens/information/widget/reviews/review_widget.dart';
+import 'package:smart_sity/screens/information/widget/reviews/widget/review_widget.dart';
 
 import '../info_buttons.dart';
 
@@ -68,7 +68,7 @@ class Reviews extends StatelessWidget {
           const Center(
             child: InfoButton(
               text: 'Load more',
-              textColor: Colors.black,
+              textColor: Colors.black, image: '',
             ),
           ),
         ],
