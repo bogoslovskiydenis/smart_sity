@@ -43,7 +43,8 @@ class InformationScreen extends StatelessWidget implements PreferredSizeWidget {
                       CardInfo(
                           text: "Ashkelon National Park", imagePath: "imagePath"),
                       NewsEvent(),
-                      Reviews()
+                      Reviews(imagePath: '',),
+
                     ],
                   )
               ),

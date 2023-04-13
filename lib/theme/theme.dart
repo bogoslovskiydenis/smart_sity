@@ -28,9 +28,9 @@ ThemeData theme() {
             fontSize: 20
         ),
         headline4: TextStyle(
-            color: Color(0xFF282E4A),
-            fontWeight: FontWeight.bold,
-            fontSize: 14
+            color: Colors.black,
+            fontWeight: FontWeight.normal,
+            fontSize: 12
         ),
         headline6: TextStyle(
           color: Color(0xFF2B2E4A),
