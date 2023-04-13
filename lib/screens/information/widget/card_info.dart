@@ -166,11 +166,11 @@ class CardInfo extends StatelessWidget {
                       children: const [
                         InfoButton(
                           text: 'View in AR',
-                          textColor: Colors.black, image: 'assets/reality.png',
+                          textColor: Colors.black,
                         ),
                         InfoButton(
                           text: 'Location',
-                          textColor: Colors.black, image: 'assets/map.png',
+                          textColor: Colors.black,
                         ),
                       ],
                     ),

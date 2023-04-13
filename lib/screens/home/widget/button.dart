@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_sity/screens/home/homepage.dart';
 import 'package:smart_sity/screens/information/information.dart';
 
 class CustomElevatedButton extends StatelessWidget {

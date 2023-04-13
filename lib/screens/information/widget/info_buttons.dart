@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 class InfoButton extends StatelessWidget {
   const InfoButton(
-      {Key? key, required this.text, this.onPressed, required this.textColor,required this.image })
+      {Key? key, required this.text, this.onPressed, required this.textColor })
       : super(key: key);
 
   final String text;
   final Color textColor;
   final Function()? onPressed;
-  final String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,6 @@ class InfoButton extends StatelessWidget {
                     .headline3!
                     .copyWith(color: textColor),
             ),
-            Container(height: 20,width: 20, child: Image.asset(image!)),
           ],
         ),
       ),

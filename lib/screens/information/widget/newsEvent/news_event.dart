@@ -48,7 +48,7 @@ class NewsEvent extends StatelessWidget {
           Center(
             child: InfoButton(
               text: 'Load more',
-              textColor: Colors.black, image: '',
+              textColor: Colors.black,
             ),
           ),
           SizedBox(height: 20,),

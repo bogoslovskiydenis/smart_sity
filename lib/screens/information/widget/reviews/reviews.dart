@@ -68,7 +68,7 @@ class Reviews extends StatelessWidget {
           const Center(
             child: InfoButton(
               text: 'Load more',
-              textColor: Colors.black, image: '',
+              textColor: Colors.black
             ),
           ),
         ],
