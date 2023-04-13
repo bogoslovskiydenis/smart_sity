@@ -23,13 +23,14 @@ class InfoButton extends StatelessWidget {
         width: double.infinity,
         child: Row(
           children: [
-            
-            Text(
-                text,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline3!
-                    .copyWith(color: textColor),
+            Center(
+              child: Text(
+                  text,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: textColor),
+              ),
             ),
           ],
         ),

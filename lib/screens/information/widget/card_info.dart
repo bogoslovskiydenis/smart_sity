@@ -74,7 +74,7 @@ class CardInfo extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 500,
+          height: 550,
           width: 390,
           color: Colors.white,
           child: Column(
@@ -93,7 +93,7 @@ class CardInfo extends StatelessWidget {
                             child: Image.network(
                               item,
                               fit: BoxFit.cover,
-                              height: 200,
+                              height: 250,
                               width: 358,
                             ),
                           ),
@@ -175,6 +175,7 @@ class CardInfo extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: 20,),
                   const Divider(
                     thickness: 1,
                   ),
